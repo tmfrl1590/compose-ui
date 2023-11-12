@@ -1,0 +1,28 @@
+package com.ui.ui
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
+import com.ui.ui.ui.HomeScreen
+import com.ui.ui.ui.theme.MeditationUIYouTubeTheme
+
+
+class MainActivity : ComponentActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            MeditationUIYouTubeTheme {
+                HomeScreen()
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+fun pre(){
+    HomeScreen()
+}
